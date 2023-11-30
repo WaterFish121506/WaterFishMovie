@@ -1,23 +1,23 @@
-import { RouteRecordRaw, createRouter, createWebHistory } from "vue-router";
+import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router'
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: "/",
+    path: '/',
     redirect: {
-      name: "Home",
+      name: 'Home',
     },
   },
   {
-    path: "/:catchAll(.*)",
+    path: '/:catchAll(.*)',
     redirect: {
-      name: "Home",
+      name: 'Home',
     },
   },
-];
+]
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
-});
+})
 
-export default router;
+export default router
