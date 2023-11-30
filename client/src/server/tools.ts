@@ -6,10 +6,11 @@ export function tansParams(params: any) {
   let result = ''
   for (const propName of Object.keys(params)) {
     const value = params[propName]
-    var part = encodeURIComponent(propName) + '='
+    const part = encodeURIComponent(propName) + '='
     if (value !== null && value !== '' && typeof value !== 'undefined') {
       if (typeof value === 'object') {
         for (const key of Object.keys(value)) {
+          // eslint-disable-next-line max-depth
           if (value[key] !== null && value[key] !== '' && typeof value[key] !== 'undefined') {
             const params = propName + '[' + key + ']'
             const subPart = encodeURIComponent(params) + '='
