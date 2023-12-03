@@ -13,6 +13,17 @@ const routes: Array<RouteRecordRaw> = [
       name: 'Home',
     },
   },
+  {
+    path: '/',
+    component: () => import('@/layouts/AppLayout.vue'),
+    children: [
+      {
+        name: 'Home',
+        path: 'home',
+        component: () => import('@/pages/home/Home.vue'),
+      },
+    ],
+  },
 ]
 
 const router = createRouter({
