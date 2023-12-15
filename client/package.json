@@ -12,11 +12,6 @@
     "prepare": "cd .. && husky install client/.husky",
     "commit": "git-cz"
   },
-  "config": {
-    "commitizen": {
-      "path": "client/node_modules/cz-conventional-changelog-zh"
-    }
-  },
   "lint-staged": {
     "*.{vue,js,ts}": "eslint --fix"
   },
@@ -34,7 +29,6 @@
     "@typescript-eslint/parser": "^6.13.1",
     "@vitejs/plugin-vue": "^4.5.0",
     "commitizen": "^4.3.0",
-    "cz-conventional-changelog-zh": "^0.0.2",
     "eslint": "^8.54.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.0.0",
